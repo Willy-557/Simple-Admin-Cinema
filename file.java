@@ -21,7 +21,7 @@ public class file{
                 break;
             }
             else if (menu > 4 || menu < 1) {
-                System.out.println("Invalid input (Input harus antara angka 1 sampai 4!)");
+                System.out.println("\nInvalid input (Input harus antara angka 1 sampai 4!)");
                 continue;
             }
             else {
@@ -33,6 +33,7 @@ public class file{
                         System.out.println("Film " + "'" + namaFilm + "'" + " berhasil di-tambahkan!");
                         break;
 
+                    
                     case 2:
                         if (daftarFilm.size() == 0) {
                             System.out.println("\nBelum ada film yang di-tambahkan!");
@@ -44,8 +45,9 @@ public class file{
                                 int index = i + 1;
                                 System.out.println(index + ". " + daftarFilm.get(i));
                             }
-
-                            System.out.println("Hapus nomor berapa? : ");
+                            
+                            
+                            System.out.println("\nHapus nomor berapa? : ");
                             int hapusFilm = scanner.nextInt();
 
                             
@@ -55,9 +57,9 @@ public class file{
                             }
                             else {
                                 int indexFilm = hapusFilm - 1;
-                                daftarFilm.remove(indexFilm);
                                 System.out.println("Film " + "'" + daftarFilm.get(indexFilm) + "'" + " berhasil dihapus!");
-                                break;    
+                                daftarFilm.remove(indexFilm);
+                                break;
                             }
                         }
 

@@ -51,7 +51,7 @@ public class file{
                             int hapusFilm = scanner.nextInt();
 
                             
-                            if (hapusFilm > daftarFilm.size()) {
+                            if (hapusFilm > daftarFilm.size() || hapusFilm < 1) {
                                 System.out.println("Inputan tidak valid!");
                                 continue;
                             }

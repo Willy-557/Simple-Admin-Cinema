@@ -49,6 +49,17 @@ public class file{
                             int hapusFilm = scanner.nextInt();
 
                             
+                            if (hapusFilm > daftarFilm.size()) {
+                                System.out.println("Inputan valid!");
+                                continue;
+                            }
+                            else {
+                                int indexFilm = hapusFilm - 1;
+                                daftarFilm.remove(indexFilm);
+                                System.out.println("Film " + "'" + daftarFilm.get(indexFilm) + "'" + " berhasil dihapus!");
+                                break;    
+                            }
+                        }
 
                     case 3:
                         if (daftarFilm.size() == 0) {

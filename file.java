@@ -27,11 +27,28 @@ public class file{
             else {
                 switch (menu) {
                     case 1:
-                        System.out.print("Masukkan nama film yang ingin di-tambahkan: ");
+                        System.out.print("\nMasukkan nama film yang ingin di-tambahkan: ");
                         String namaFilm = scanner.nextLine();
                         daftarFilm.add(namaFilm);
                         System.out.println("Film " + "'" + namaFilm + "'" + " berhasil di-tambahkan!");
                         break;
+
+                    case 2:
+                        if (daftarFilm.size() == 0) {
+                            System.out.println("\nBelum ada film yang di-tambahkan!");
+                            break;
+                        }
+                        else {
+                            System.out.println("\n--- HAPUS FILM ---");
+                            for (int i = 0; i < daftarFilm.size(); i++){
+                                int index = i + 1;
+                                System.out.println(index + ". " + daftarFilm.get(i));
+                            }
+
+                            System.out.println("Hapus nomor berapa? : ");
+                            int hapusFilm = scanner.nextInt();
+
+                            
 
                     case 3:
                         if (daftarFilm.size() == 0) {

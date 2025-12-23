@@ -7,7 +7,7 @@ public class file{
         ArrayList<String> daftarFilm = new ArrayList<>();
 
         while (true) {
-            System.out.println("=== ADMIN BIOSKOP ===");
+            System.out.println("\n=== ADMIN BIOSKOP ===");
             System.out.println("1. Tambah Film");
             System.out.println("2. Hapus Film");
             System.out.println("3. Lihat Daftar Film");
@@ -31,6 +31,12 @@ public class file{
                         daftarFilm.add(namaFilm);
                         System.out.println("Film " + "'" + namaFilm + "'" + " berhasil di-tambahkan!");
                         break;
+
+                    case 3:
+                        System.out.println("--- DAFTAR FILM TAYANG ---");
+                        for (int i = 0; i < daftarFilm.size(); i++){
+                            System.out.println(i + ". " + daftarFilm.get(i));
+                        }
                     
                     default:
                         break;

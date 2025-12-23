@@ -20,7 +20,7 @@ public class file{
                 break;
             }
             else if (menu > 4 || menu < 1) {
-                System.out.println("Invalid input!");
+                System.out.println("Invalid input (Input harus antara angka 1 sampai 4!)");
                 continue;
             }
             else {

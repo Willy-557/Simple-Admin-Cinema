@@ -46,13 +46,13 @@ public class file{
                                 System.out.println(index + ". " + daftarFilm.get(i));
                             }
                             
-                            
+
                             System.out.println("\nHapus nomor berapa? : ");
                             int hapusFilm = scanner.nextInt();
 
                             
                             if (hapusFilm > daftarFilm.size()) {
-                                System.out.println("Inputan valid!");
+                                System.out.println("Inputan tidak valid!");
                                 continue;
                             }
                             else {

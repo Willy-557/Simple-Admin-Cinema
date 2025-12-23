@@ -14,6 +14,7 @@ public class file{
             System.out.println("4. Keluar");
             System.out.print("Pilih menu: ");
             int menu = scanner.nextInt();
+            scanner.nextLine();
 
             if (menu == 4) {
                 System.out.println("Terimakasih!");
@@ -27,16 +28,25 @@ public class file{
                 switch (menu) {
                     case 1:
                         System.out.print("Masukkan nama film yang ingin di-tambahkan: ");
-                        String namaFilm = scanner.next();
+                        String namaFilm = scanner.nextLine();
                         daftarFilm.add(namaFilm);
                         System.out.println("Film " + "'" + namaFilm + "'" + " berhasil di-tambahkan!");
                         break;
 
                     case 3:
-                        System.out.println("--- DAFTAR FILM TAYANG ---");
-                        for (int i = 0; i < daftarFilm.size(); i++){
-                            System.out.println(i + ". " + daftarFilm.get(i));
+                        if (daftarFilm.size() == 0) {
+                            System.out.println("\nBelum ada film yang di-tambahkan!");
+                            break;
                         }
+                        else {
+                            System.out.println("\n--- DAFTAR FILM TAYANG ---");
+                            for (int i = 0; i < daftarFilm.size(); i++){
+                                int index = i + 1;
+                                System.out.println(index + ". " + daftarFilm.get(i));
+                            }
+                            break;
+                        }
+                        
                     
                     default:
                         break;

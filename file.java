@@ -15,7 +15,27 @@ public class file{
             System.out.print("Pilih menu: ");
             int menu = scanner.nextInt();
 
-            
+            if (menu == 4) {
+                System.out.println("Terimakasih!");
+                break;
+            }
+            else if (menu > 4 || menu < 1) {
+                System.out.println("Invalid input!");
+                continue;
+            }
+            else {
+                switch (menu) {
+                    case 1:
+                        System.out.print("Masukkan nama film yang ingin di-tambahkan: ");
+                        String namaFilm = scanner.next();
+                        daftarFilm.add(namaFilm);
+                        System.out.println("Film " + "'" + namaFilm + "'" + " berhasil di-tambahkan!");
+                        break;
+                    
+                    default:
+                        break;
+                }
+            }
         }
     }
 }
